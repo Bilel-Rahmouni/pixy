@@ -1,0 +1,122 @@
+.about {
+  padding-block: var(--space-3xl);
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  margin-bottom: var(--space-2xl);
+}
+
+.about__highlight {
+  color: var(--color-lime);
+  font-style: italic;
+}
+
+.about__lead {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-md);
+}
+
+.about__text {
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  margin-bottom: var(--space-xl);
+}
+
+.about__values {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.about__value {
+  display: flex;
+  gap: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: var(--border-subtle);
+}
+
+.about__value-num {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+  padding-top: 0.15rem;
+}
+
+.about__value-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.about__value-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.about__banner {
+  position: relative;
+  padding-block: var(--space-xl);
+  border-radius: var(--radius-xl);
+  background: var(--color-bg-card);
+  border: var(--border-subtle);
+  overflow: hidden;
+}
+
+.about__banner-text {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 12vw, 8rem);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(242, 236, 227, 0.08);
+  text-stroke: 1px rgba(242, 236, 227, 0.08);
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+  width: max-content;
+}
+
+.about__banner-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xl);
+  background: linear-gradient(90deg, transparent, rgba(8, 8, 10, 0.4) 20%, rgba(8, 8, 10, 0.4) 80%, transparent);
+}
+
+.about__banner-stat {
+  padding: 0.6rem 1.2rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: var(--color-bg);
+  border: var(--border-subtle);
+  border-radius: 100px;
+  backdrop-filter: blur(8px);
+}
+
+@media (max-width: 900px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .about__banner-overlay {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+}

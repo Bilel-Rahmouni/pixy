@@ -1,0 +1,110 @@
+.testimonials {
+  padding-block: var(--space-3xl);
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+.testimonials__intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.testimonials__stats {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.testimonials__stat {
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: var(--border-subtle);
+  background: var(--color-bg-card);
+  min-width: 120px;
+}
+
+.testimonials__stat-value {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--color-accent);
+}
+
+.testimonials__stat-label {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+.testimonials__bento {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  margin-bottom: var(--space-xl);
+}
+
+.testimonials__strip {
+  padding-block: var(--space-md);
+  border-block: var(--border-subtle);
+  background: var(--color-bg-elevated);
+  overflow: hidden;
+}
+
+.testimonials__strip-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.testimonials__strip-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  padding-inline: var(--space-lg);
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text-dim);
+  white-space: nowrap;
+}
+
+.testimonials__strip-dot {
+  color: var(--color-accent);
+  font-size: 0.55em;
+}
+
+@media (max-width: 900px) {
+  .testimonials__intro {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .testimonials__stats {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .testimonials__stat {
+    flex: 1 1 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonials__stats {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .testimonials__stat {
+    width: 100%;
+  }
+}
