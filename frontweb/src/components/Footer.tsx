@@ -1,3 +1,4 @@
+import { Logo } from './Logo'
 import './Footer.css'
 
 const socials = [
@@ -27,6 +28,9 @@ export function Footer() {
 
         <div className="footer__bottom">
           <span>© 2026 Pixy Studio</span>
+          <p className="footer__credit">
+            Site by <Logo />
+          </p>
         </div>
       </div>
     </footer>
