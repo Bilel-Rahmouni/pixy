@@ -27,7 +27,7 @@ export function Nav() {
   return (
     <header className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
       <div className="nav__inner container">
-        <a href="#" className="nav__logo" aria-label="Pixy home">
+        <a href="https://pixystudio.io" className="nav__logo" aria-label="Pixy home">
           <span className="nav__logo-mark">◆</span>
           PIXY
         </a>

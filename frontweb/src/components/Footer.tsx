@@ -13,7 +13,7 @@ export function Footer() {
     <footer className="footer">
       <div className="container footer__inner">
         <div className="footer__top">
-          <a href="#" className="footer__logo">
+          <a href="https://pixystudio.io" className="footer__logo">
             <span className="footer__logo-mark">◆</span>
             PIXY
           </a>
@@ -29,7 +29,15 @@ export function Footer() {
         <div className="footer__bottom">
           <span>© 2026 Pixy Studio</span>
           <p className="footer__credit">
-            Site by <Logo />
+            <span className="footer__credit-label">Built by</span>
+            <a
+              className="footer__credit-link"
+              href="https://mintstudio.io"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Logo />
+            </a>
           </p>
         </div>
       </div>
